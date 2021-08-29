@@ -1,7 +1,12 @@
+import { useQuery } from '@apollo/client';
 import { format } from 'date-fns';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
+// Импортируем локальный запрос IS_LOGGED_IN
+import { IS_LOGGED_IN } from '../gql/query';
+// Импортируем компоненты UI авторизованного пользователя
+import NoteUser from './NoteUser';
 
 // Ограничиваем расширение заметок до 800 пикселей
 const StyledNote = styled.article`
@@ -28,13 +33,18 @@ margin-left: auto;
 `;
 
 const Note = ({ note }) => {
+    const { loading, error, data } = useQuery(IS_LOGGED_IN);
+    // Если данные загружаются, выдаем сообщение о загрузке
+    if (loading) return <p>Loading...</p>;
+    // Если при получении данных произошел сбой, выдаем сообщение об ошибке
+    if (error) return <p>Error!</p>;
     return (
         <StyledNote>
             <MetaData>
                 <MetaInfo>
                     <img
                         src={note.author.avatar}
-                        alt="{note.author.username} avatar"
+                        alt={`${note.author.username} avatar`}
                         height="50px"
                     />
                 </MetaInfo>
@@ -42,9 +52,15 @@ const Note = ({ note }) => {
                     <em>by</em> {note.author.username} <br />
                     {format(note.createdAt, 'MMM Do YYYY')}
                 </MetaInfo>
-                <UserActions>
-                    <em>Favorites:</em> {note.favoriteCount}
-                </UserActions>
+                {data.isLoggedIn ? (
+                    <UserActions>
+                        <NoteUser note={note} />
+                    </UserActions>
+                ) : (
+                        <UserActions>
+                            <em>Favorites:</em> {note.favoriteCount}
+                        </UserActions>
+                    )}
             </MetaData>
             <ReactMarkdown source={note.content} />
         </StyledNote>
