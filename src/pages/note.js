@@ -1,27 +1,11 @@
 // Импортируем зависимости GraphQL
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import React from 'react';
 // Импортируем компонент Note
 import Note from '../components/Note';
+import { GET_NOTE } from '../gql/query';
 
 
-
-// Запрос note, принимающий переменную ID
-const GET_NOTE = gql`
-query note($id: ID!) {
-    note(id: $id) {
-        id
-        createdAt
-        content
-        favoriteCount
-        author {
-            username
-            id
-            avatar
-        }
-    }
-}
-`
 
 const NotePage = props => {
     // Сохраняем id из url в виде переменной

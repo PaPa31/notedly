@@ -39,17 +39,17 @@ const FavoriteNote = props => {
                         setCount(count - 1);
                     }}
                 >
-                    Remove Favorite
+                    Remove Favorite  👎  {" "}
                 </ButtonAsLink>
             ) : (
                     <ButtonAsLink
                         onClick={() => {
-                            toggleFavorite(); 
+                            toggleFavorite();
                             setFavorited(true);
                             setCount(count + 1);
                         }}
                     >
-                        Add Favorite
+                        Add Favorite 👍 {" "}
                     </ButtonAsLink>
                 )}
                 : {count}

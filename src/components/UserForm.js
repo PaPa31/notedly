@@ -3,20 +3,24 @@ import styled from 'styled-components';
 import Button from './Button';
  
  const Wrapper = styled.div`
- border: 1px solid #f5f4f0;
- max-width: 500px; 
- padding: 1em; 
- margin: 0 auto;
+    border: 1px solid #3c361f;
+    max-width: 500px;
+    padding: 1em;
+    margin: 0 auto;
  `;
- const Form = styled.form` 
+ const Form = styled.form`
  label,
  input {
- display: block; 
-  line-height: 2em;
+    display: block;
+    line-height: 2em;
  }
  input {
- width: 100%;
- margin-bottom: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: black;
+    border: none;
+    padding-left: 5px;
+    color: #757575;
  }
  `;
 
@@ -33,7 +37,7 @@ const UserForm = props => {
     return (
         <Wrapper>
             {/* Отображаем соответствующий заголовок формы */}
-            {props.formType === 'signup' ? <h2>Sign Up</h2> : <h2>Sign In</h2>}
+            {props.formType === 'signup' ? <h2>Sign Up 🔑</h2> : <h2>Sign In 🔓</h2>}
             {/* Выполняем мутацию, когда пользователь отправляет форму */}
             <Form
                 onSubmit={e => {
@@ -47,7 +51,7 @@ const UserForm = props => {
             >
                 {props.formType === 'signup' && (
                     <React.Fragment>
-                        <label htmlFor="username">Username:</label>
+                        <label htmlFor="username">👤 Username:</label>
                         <input
                             required
                             type="text"
@@ -58,7 +62,7 @@ const UserForm = props => {
                         />
                     </React.Fragment>
                 )}
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">📭 Email:</label>
                 <input
                     required
                     type="email"
@@ -67,7 +71,7 @@ const UserForm = props => {
                     placeholder="Email"
                     onChange={onChange}
                 />
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">🔐 Password:</label>
                 <input
                     required
                     type="password"
@@ -76,7 +80,7 @@ const UserForm = props => {
                     placeholder="Password"
                     onChange={onChange}
                 />
-                <Button type="submit">Submit</Button>
+                <Button type="submit">🏹 Submit</Button>
             </Form>
         </Wrapper>
     );

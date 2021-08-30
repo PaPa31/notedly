@@ -35,6 +35,25 @@ deleteNote(id: $id)
  }
  `;
  
+// Запрос new note
+const NEW_NOTE = gql`
+mutation newNote($content: String!) {
+    newNote(content: $content) {
+        id
+        content
+        createdAt
+        favoriteCount
+        favoritedBy {
+            id
+            username
+        }
+        author {
+            username
+            id
+        }
+    }
+}
+`
  // Добавляем TOGGLE_FAVORITE
- export { EDIT_NOTE, DELETE_NOTE, TOGGLE_FAVORITE };
+ export { NEW_NOTE, EDIT_NOTE, DELETE_NOTE, TOGGLE_FAVORITE };
 

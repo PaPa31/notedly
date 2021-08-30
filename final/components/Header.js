@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import logo from '../img/logo.svg';
 import { useQuery } from '@apollo/client';
+import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
-import ButtonAsLink from './ButtonAsLink';
+import styled from 'styled-components';
 import { IS_LOGGED_IN } from '../gql/query';
+import logo from '../img/logo.svg';
+import ButtonAsLink from './ButtonAsLink';
+
 
 const HeaderBar = styled.header`
   width: 100%;

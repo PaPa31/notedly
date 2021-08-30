@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../img/logo.svg';
 import ButtonAsLink from './ButtonAsLink';
 
 // Локальный запрос
@@ -13,25 +12,29 @@ const IS_LOGGED_IN = gql`
 `
 
  const HeaderBar = styled.header`
- width: 100%;
- padding: 0.5em 1em;
- display: flex;
- height: 64px;
- position: fixed;
- align-items: center;
- background-color: #fff;
- box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
- z-index: 1;
+    width: 100%;
+    padding: 0.5em 1em;
+    display: flex;
+    height: 64px;
+    position: fixed;
+    align-items: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    z-index: 1;
  `
 
  const LogoText = styled.h1`
- margin: 0;
- padding: 0;
- display: inline;
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+    a {
+    text-decoration: none;
+    color: inherit !important;
+    }
  `
 
  const UserState = styled.div`
- margin-left: auto;
+    margin-left: auto;
  `
 
 
@@ -41,8 +44,10 @@ const Header = props => {
     const { data, client } = useQuery(IS_LOGGED_IN);
     return (
         <HeaderBar>
-            <img src={logo} alt="Notedly Logo" height="40" />
-            <LogoText>Notedly</LogoText>
+            {/* <img src={logo} alt="Gudron Logo" height="40" /> */}
+            <LogoText>
+                <Link to={'/'}>💬 TextBlock</Link>
+            </LogoText>
             {/* Если авторизован, отображаем ссылку log out, в противном
  случае отображаем варианты sign in и sign up */}
             <UserState>
@@ -59,12 +64,12 @@ const Header = props => {
                             props.history.push('/');
                         }}
                     >
-                        Logout
+                        Logout 🚪
                     </ButtonAsLink>
                 ) : (
                         <p>
-                            <Link to={'/signin'}>Sign In</Link> or{' '}
-                            <Link to={'/signup'}>Sign Up</Link>
+                            <Link to={'/signin'}>Sign In 🔓</Link> or{' '}
+                            <Link to={'/signup'}>Sign Up 🔑</Link>
                         </p>
                     )}
             </UserState>
