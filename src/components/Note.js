@@ -10,7 +10,7 @@ import NoteUser from './NoteUser';
 
 // Ограничиваем расширение заметок до 800 пикселей
 const StyledNote = styled.article`
-    max-width:800px
+    max-width:800px;
 `;
 
 // Стилизуем метаданные заметки
@@ -24,12 +24,19 @@ const MetaData = styled.div`
 // Добавляем пространство между аватаром и метаданными
 const MetaInfo = styled.div`
     padding-right: 1em;
+    display: inline-block;
 `;
 
 // Выравниваем 'UserActions' по правой стороне на больших экранах
 const UserActions = styled.div`
     margin-left: auto;
+    text-align: left;
+    padding: 10px 0;
+
+@media (min-width: 500px) {
     text-align: right;
+    padding: 0;
+}
 `;
 
 const Note = ({ note }) => {

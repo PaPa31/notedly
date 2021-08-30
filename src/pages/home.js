@@ -47,7 +47,7 @@ const Home = () => {
                         })
                     }
                 >
-                    Load more
+                    🛒 Load more
                 </Button>
             )}
         </React.Fragment>
