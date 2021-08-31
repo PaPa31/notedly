@@ -1,15 +1,9 @@
- import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+import { IS_LOGGED_IN } from '../gql/query';
 import ButtonAsLink from './ButtonAsLink';
-
-// Локальный запрос
-const IS_LOGGED_IN = gql`
-{
-    isLoggedIn @client
-}
-`
 
 const HeaderBar = styled.header`
     width: 100%;

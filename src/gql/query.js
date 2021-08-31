@@ -42,7 +42,6 @@ const IS_LOGGED_IN = gql`
 }
 `
 
-// Добавляем запрос GET_MY_NOTES
 const GET_MY_NOTES = gql`
 query me {
     me {
@@ -63,7 +62,6 @@ query me {
 }
 `
 
-// Добавляем запрос GET_MY_FAVORITES
 const GET_MY_FAVORITES = gql`
 query me {
     me {
@@ -84,7 +82,6 @@ query me {
 }
 `;
 
-// Добавляем в запросы GET_ME 
 const GET_ME = gql`
 query me {
     me {
@@ -96,7 +93,6 @@ query me {
 }
  `;
 
- // Обновляем для включения GET_ME
  export {
     GET_NOTES,
     GET_NOTE,

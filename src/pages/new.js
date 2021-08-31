@@ -15,7 +15,7 @@ const NewNote = props => {
         refetchQueries: [{ query: GET_MY_NOTES }, { query: GET_NOTES }],
         onCompleted: data => {
             // В конце перенаправляем пользователя на страницу заметки
-            props.history.push(`note/${data.newNote.id}`);
+            props.history.push(`/note/${data.newNote.id}`);
         }
     })
 
