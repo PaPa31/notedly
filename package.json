@@ -12,7 +12,7 @@
     "cy:open": "cypress open"
   },
   "keywords": [],
-  "homepage": "https://textblock.netlify.app/",
+  "homepage": ".",
   "dependencies": {
     "@apollo/client": "3.0.0-beta.24",
     "@types/react": "^16.9.17",
