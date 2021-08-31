@@ -7,8 +7,8 @@
 import { setContext } from 'apollo-link-context';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Pages from './pages';
 import GlobalStyle from '/components/GlobalStyle';
+import Pages from '/pages';
 
 // Настраиваем API URI и кэш
 const uri = process.env.API_URI;
