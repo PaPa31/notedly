@@ -19,6 +19,6 @@ const DeleteNote = props => {
             props.history.push('/mynotes');
         }
     });
-    return <ButtonAsLink onClick={deleteNote}>Delete Note 🚽</ButtonAsLink>;
+    return <ButtonAsLink onClick={deleteNote}>Delete Note <span aria-hidden="true" role="img">🚽</span></ButtonAsLink>;
 }
 export default withRouter(DeleteNote);

@@ -11,6 +11,9 @@ import NoteUser from './NoteUser';
 // Ограничиваем расширение заметок до 800 пикселей
 const StyledNote = styled.article`
     max-width:800px;
+    img {
+        max-width: 100%;
+    }
 `;
 
 // Стилизуем метаданные заметки
@@ -25,6 +28,7 @@ const MetaData = styled.div`
 const MetaInfo = styled.div`
     padding-right: 1em;
     display: inline-block;
+    float: left;
 `;
 
 // Выравниваем 'UserActions' по правой стороне на больших экранах
@@ -32,10 +36,28 @@ const UserActions = styled.div`
     margin-left: auto;
     text-align: left;
     padding: 10px 0;
+    clear: left;
+    
+    span {
+        display: none;
+    }
+
+    a {
+        padding: 0 5px;
+    }
 
 @media (min-width: 500px) {
     text-align: right;
     padding: 0;
+    max-width: 160px;
+
+    span {
+        display: initial;
+    }
+
+    a {
+        padding: 0;
+    }
 }
 `;
 
@@ -57,7 +79,7 @@ const Note = ({ note }) => {
                 </MetaInfo>
                 <MetaInfo>
                     <em>by</em> {note.author.username} <br />
-                    {format(note.createdAt, 'MMM DD YYYY')}
+                    {format(note.createdAt, 'MMM DD YYYY HH:mm')}
                 </MetaInfo>
                 {data.isLoggedIn ? (
                     <UserActions>

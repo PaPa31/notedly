@@ -39,7 +39,7 @@ const FavoriteNote = props => {
                         setCount(count - 1);
                     }}
                 >
-                    Remove Favorite  👎  {" "}
+                    Remove Favorite  <span aria-hidden="true" role="img">👎</span> {" "}
                 </ButtonAsLink>
             ) : (
                     <ButtonAsLink
@@ -49,7 +49,7 @@ const FavoriteNote = props => {
                             setCount(count + 1);
                         }}
                     >
-                        Add Favorite 👍 {" "}
+                        Add Favorite <span aria-hidden="true" role="img">👍</span> {" "}
                     </ButtonAsLink>
                 )}
                 : {count}
