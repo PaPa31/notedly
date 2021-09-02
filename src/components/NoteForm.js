@@ -13,7 +13,7 @@ const Form = styled.form`
 
 const TextArea = styled.textarea`
     width: 100%;
-    height: 200px;
+    height: 90%;
     background:#14181B;
     border-radius: 5px;
     border-color: #3a3a3a;
