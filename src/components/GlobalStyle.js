@@ -18,6 +18,9 @@ background-color: #14181B;
 color: #C55F0F;
 line-height: 1.4;
 }
+div#root {
+    height: 100%;
+}
 h1,h2,h3,h4,h5,h6 {
    color: #C3CC0F;
 }
@@ -43,9 +46,12 @@ code,pre {
    border-radius: 6px;
 }
 blockquote {
-   border-left: .25em solid #ccc;
-   color: #777;
+   border-left: .25em solid #768390;
    padding: 0 1em;
+   font-style: italic;
+}
+blockquote p{
+   color: #768390
 }
 nav::-webkit-scrollbar{
 height:auto;width:1px
@@ -58,6 +64,5 @@ header {
     background: #0A0C0E;
 }
 p {
-    color: #8F9092;
-}
-`
+    color: #adbac7
+`;
