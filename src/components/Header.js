@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { IS_LOGGED_IN } from '../gql/query';
+import logo from '../img/textblock-logo.svg';
 import ButtonAsLink from './ButtonAsLink';
 
 const HeaderBar = styled.header`
@@ -15,8 +16,21 @@ const HeaderBar = styled.header`
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
     z-index: 1;
 
+a {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+img {
+    padding: 0 3px;
+    vertical-align: bottom;
+}
+
     @media (min-width: 360px) {
         padding: 0.5em 1em;
+        img {
+            padding: 0 5px 0 0;
+        }
     }
 `
 
@@ -24,11 +38,6 @@ const LogoText = styled.h1`
     margin: 0;
     padding: 0;
     display: inline;
-
-a {
-    text-decoration: none;
-    color: inherit !important;
-}
 
 @media (min-width: 320px) {
     span {
@@ -59,11 +68,12 @@ const Header = props => {
     const { data, client } = useQuery(IS_LOGGED_IN);
     return (
         <HeaderBar>
-            {/* <img src={logo} alt="Gudron Logo" height="40" /> */}
-            <LogoText>
-                <span aria-hidden="true" role="img">💬</span>
-                <Link to={'/'}>TextBlock</Link>
-            </LogoText>
+            <Link to={'/'}>
+                <LogoText>
+                    <img src={logo} alt="Textblock Logo" height="40" />
+                    TextBlock
+                </LogoText>
+            </Link>
             {/* Если авторизован, отображаем ссылку log out, в противном
  случае отображаем варианты sign in и sign up */}
             <UserState>
