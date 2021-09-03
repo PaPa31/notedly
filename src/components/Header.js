@@ -22,7 +22,7 @@ a {
 }
 
 img {
-    padding: 0 3px;
+    padding: 0 3px 0 6px;
     vertical-align: bottom;
 }
 
