@@ -22,7 +22,7 @@ div#root {
     height: 100%;
 }
 h1,h2,h3,h4,h5,h6 {
-   color: #9279BA;
+   color: #B9A5E2;
 }
 a:link, a:visited {
    color: #9279BA;
