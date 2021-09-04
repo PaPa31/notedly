@@ -14,6 +14,9 @@ const StyledNote = styled.article`
     img {
         max-width: 100%;
     }
+h1,h2,h3,h4,h5,h6{
+    color: #ac9f8e;
+}
 `;
 
 // Стилизуем метаданные заметки
@@ -21,6 +24,12 @@ const MetaData = styled.div`
 @media (min-width: 500px) {
     display: flex;
     align-items: top;
+}
+a, button {
+  color: #95c3c7;
+}
+a:hover, button:hover {
+  color: #2e7c83
 }
 `;
 
@@ -37,9 +46,10 @@ const UserActions = styled.div`
     text-align: left;
     padding: 10px 0;
     clear: left;
-em {
-    color: #9279BA;
-}
+
+    em {
+        color: #95c3c7;
+    }
 
     span {
         display: none;
@@ -62,7 +72,7 @@ em {
         padding: 0;
     }
 }
-`;
+`
 
 const Note = ({ note }) => {
     const { loading, error, data } = useQuery(IS_LOGGED_IN);

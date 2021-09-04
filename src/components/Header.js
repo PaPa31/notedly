@@ -19,6 +19,12 @@ const HeaderBar = styled.header`
 a {
     text-decoration: none;
 }
+button {
+    color:#9279ba;
+}
+button:hover {
+    color: #B9A5E2;
+}
 
 img {
     padding: 0 3px 0 6px;

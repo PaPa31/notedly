@@ -21,13 +21,13 @@ color: #AEAFB0;
 div#root {
     height: 100%;
 }
-h1,h2,h3,h4,h5,h6 {
+h1 {
    color: #B9A5E2;
 }
 a:link, a:visited {
    color: #9279BA;
 }
-a:hover,a:focus {
+a:hover, a:focus {
    color: #B9A5E2;
 }
 code {
