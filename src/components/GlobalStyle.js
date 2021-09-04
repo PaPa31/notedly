@@ -21,6 +21,7 @@ color: #AEAFB0;
 div#root {
     height: 100%;
 }
+
 a:link, a:visited, button {
    color: #9279BA;
 }
