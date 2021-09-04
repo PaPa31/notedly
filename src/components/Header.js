@@ -16,11 +16,6 @@ const HeaderBar = styled.header`
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
     z-index: 1;
 
-a {
-    text-decoration: none;
-    color: inherit !important;
-}
-
 img {
     padding: 0 3px 0 6px;
     vertical-align: bottom;

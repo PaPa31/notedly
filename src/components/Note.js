@@ -37,6 +37,9 @@ const UserActions = styled.div`
     text-align: left;
     padding: 10px 0;
     clear: left;
+em {
+    color: #9279BA;
+}
 
     span {
         display: none;
