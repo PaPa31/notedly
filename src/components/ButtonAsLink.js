@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ButtonAsLink = styled.button`
     background: none;
-    color: #741B17;
+    color: #9279BA;
     border: none;
     padding: 0;
     font: inherit;
@@ -10,7 +10,7 @@ const ButtonAsLink = styled.button`
     cursor: pointer;
 
 :hover, :active {
-    color: #c0443e;
+    color: #B9A5E2;
 }
 `;
 

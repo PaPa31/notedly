@@ -49,13 +49,13 @@ a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    color: #C24428;
+    color: #B9A5E2;
 }
 a:visited {
-    color: #C24428;
+    color: #B9A5E2;
 }
 a:hover, a:focus {
-    color: #D4C08D;
+    color: #9279BA;
 }
  `
 

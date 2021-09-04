@@ -15,20 +15,20 @@ body {
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 background-color: #14181B;
-color: #C55F0F;
 line-height: 1.4;
+color: #adbac7;
 }
 div#root {
     height: 100%;
 }
 h1,h2,h3,h4,h5,h6 {
-   color: #7b5bc9;
+   color: #9279BA;
 }
 a:link, a:visited {
-   color: #741B17;
+   color: #9279BA;
 }
 a:hover,a:focus {
-   color: #c0443e;
+   color: #B9A5E2;
 }
 code {
    margin: 0;
@@ -63,6 +63,4 @@ nav {
 header {
     background: #0A0C0E;
 }
-p {
-    color: #adbac7
 `;
