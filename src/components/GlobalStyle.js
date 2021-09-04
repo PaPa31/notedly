@@ -21,13 +21,10 @@ color: #AEAFB0;
 div#root {
     height: 100%;
 }
-h1 {
-   color: #B9A5E2;
-}
-a:link, a:visited {
+a:link, a:visited, button {
    color: #9279BA;
 }
-a:hover, a:focus {
+a:hover, a:focus, button:hover {
    color: #B9A5E2;
 }
 code {

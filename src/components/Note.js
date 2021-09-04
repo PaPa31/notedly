@@ -14,9 +14,6 @@ const StyledNote = styled.article`
     img {
         max-width: 100%;
     }
-h1,h2,h3,h4,h5,h6{
-    color: #ac9f8e;
-}
 `;
 
 // Стилизуем метаданные заметки
@@ -24,12 +21,6 @@ const MetaData = styled.div`
 @media (min-width: 500px) {
     display: flex;
     align-items: top;
-}
-a, button {
-  color: #95c3c7;
-}
-a:hover, button:hover {
-  color: #2e7c83
 }
 `;
 
@@ -48,7 +39,7 @@ const UserActions = styled.div`
     clear: left;
 
     em {
-        color: #95c3c7;
+        color: #9279BA;
     }
 
     span {
