@@ -16,7 +16,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 background-color: #14181B;
 line-height: 1.4;
-color: #adbac7;
+color: #AEAFB0;
 }
 div#root {
     height: 100%;
