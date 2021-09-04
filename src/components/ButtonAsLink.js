@@ -9,8 +9,8 @@ const ButtonAsLink = styled.button`
     text-decoration: underline;
     cursor: pointer;
 
-:hover, :active {
-    color: #B9A5E2;
+:hover, :active, :visited {
+    color: #D1C1F2;
 }
 `;
 

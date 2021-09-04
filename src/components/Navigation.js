@@ -55,7 +55,7 @@ a:visited {
     color: #9279BA;
 }
 a:hover, a:focus {
-    color: #B9A5E2;
+    color: #D1C1F2;
 }
  `
 
