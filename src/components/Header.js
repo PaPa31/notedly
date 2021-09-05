@@ -100,6 +100,7 @@ const Header = props => {
                             client.writeData({ data: { isLoggedIn: false } });
                             // Перенаправляем пользователя на домашнюю страницу
                             props.history.push('/');
+                            window.location = "/";
                         }}
                     >
                         Logout 🚪
