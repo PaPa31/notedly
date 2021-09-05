@@ -59,13 +59,6 @@ const UserActions = styled.div`
         vertical-align: -6px;
     }
 
-    a:link, a:visited, button {
-        color: #AEAFB0;
-    }
-    a:hover, button:hover {
-        color: #9279BA;
-    }
-
 @media (min-width: 500px) {
     text-align: right;
     padding: 0;
