@@ -66,7 +66,7 @@ const UserActions = styled.div`
 @media (min-width: 500px) {
     text-align: right;
     padding: 0;
-    max-width: 107px;
+    max-width: 112px;
 
     span {
         display: initial;
