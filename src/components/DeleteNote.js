@@ -20,6 +20,6 @@ const DeleteNote = props => {
             props.history.push('/mynotes');
         }
     });
-    return <ButtonAsLink onClick={deleteNote}>Delete <img style={{ verticalAlign: "-8px", width:"19px"}} src={dele} /></ButtonAsLink>;
+    return <ButtonAsLink onClick={deleteNote}>Delete <img style={{ verticalAlign: "-7px", width:"19px"}} src={dele} /></ButtonAsLink>;
 }
 export default withRouter(DeleteNote);
