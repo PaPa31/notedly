@@ -54,11 +54,12 @@ const UserActions = styled.div`
 
     a {
         padding: 0 5px;
+        display: inline;
     }
 
     img {
         width: 29px;
-        padding: 3px 5px;
+        padding: 3px 5px 3px 2px;
         vertical-align: -7px;
     }
 
@@ -73,6 +74,7 @@ const UserActions = styled.div`
 
     a {
         padding: 0;
+        display: block;
     }
 }
 `
