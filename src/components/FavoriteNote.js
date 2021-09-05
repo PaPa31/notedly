@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import { TOGGLE_FAVORITE } from '../gql/mutation';
 // Добавляем запрос GET_MY_FAVORITES для его повторного получения
 import { GET_MY_FAVORITES } from '../gql/query';
+import like from '../img/like.svg';
 import ButtonAsLink from './ButtonAsLink';
-
 
 const FavoriteNote = props => {
     // Сохраняем число избранных заметок пользователя как состояние
@@ -39,7 +39,7 @@ const FavoriteNote = props => {
                         setCount(count - 1);
                     }}
                 >
-                    Remove Favorite
+                    Remove
                 </ButtonAsLink>
             ) : (
                     <ButtonAsLink
@@ -49,10 +49,10 @@ const FavoriteNote = props => {
                             setCount(count + 1);
                         }}
                     >
-                        Add Favorite
+                        Add
                     </ButtonAsLink>
                 )}
-                 <span aria-hidden="true" role="img">👍</span> {" "}: {count}
+                 <img src={like} />: {count}
         </React.Fragment>
     );
 }

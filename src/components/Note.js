@@ -5,12 +5,14 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 // Импортируем локальный запрос IS_LOGGED_IN
 import { IS_LOGGED_IN } from '../gql/query';
+import like from '../img/like.svg';
 // Импортируем компоненты UI авторизованного пользователя
 import NoteUser from './NoteUser';
 
 // Ограничиваем расширение заметок до 800 пикселей
 const StyledNote = styled.article`
     max-width:800px;
+
     img {
         max-width: 100%;
     }
@@ -50,10 +52,16 @@ const UserActions = styled.div`
         padding: 0 5px;
     }
 
+    img {
+        width: 27px;
+        padding: 3px 5px;
+        vertical-align: text-top;
+    }
+
 @media (min-width: 500px) {
     text-align: right;
     padding: 0;
-    max-width: 160px;
+    max-width: 125px;
 
     span {
         display: initial;
@@ -64,7 +72,6 @@ const UserActions = styled.div`
     }
 }
 `
-
 const Note = ({ note }) => {
     const { loading, error, data } = useQuery(IS_LOGGED_IN);
     // Если данные загружаются, выдаем сообщение о загрузке
@@ -91,7 +98,7 @@ const Note = ({ note }) => {
                     </UserActions>
                 ) : (
                         <UserActions>
-                            <em>Favorites:</em> {note.favoriteCount}
+                                <em>Favorites<img src={like} />:</em> {note.favoriteCount}
                         </UserActions>
                     )}
             </MetaData>

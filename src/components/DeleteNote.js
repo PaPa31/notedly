@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { DELETE_NOTE } from '../gql/mutation';
 // Импортируем запросы для их повторного получения после удаления заметки
 import { GET_MY_NOTES, GET_NOTES } from '../gql/query';
+import dele from '../img/eps-trash.svg';
 import ButtonAsLink from './ButtonAsLink';
  
 const DeleteNote = props => {
@@ -19,6 +20,6 @@ const DeleteNote = props => {
             props.history.push('/mynotes');
         }
     });
-    return <ButtonAsLink onClick={deleteNote}>Delete Note <span aria-hidden="true" role="img">🚽</span></ButtonAsLink>;
+    return <ButtonAsLink onClick={deleteNote}>Delete <img style={{verticalAlign:"-8px"}} src={dele} /></ButtonAsLink>;
 }
 export default withRouter(DeleteNote);

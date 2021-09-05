@@ -2,8 +2,10 @@ import { useQuery } from '@apollo/client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GET_ME } from '../gql/query';
+import hammer from '../img/hammer.svg';
 import DeleteNote from './DeleteNote';
 import FavoriteNote from './FavoriteNote';
+
 const NoteUser = props => {
     const { loading, error, data } = useQuery(GET_ME);
     // Если данные загружаются, выдаем сообщение о загрузке
@@ -20,7 +22,7 @@ const NoteUser = props => {
             {" "}
             {data.me.id === props.note.author.id && (
                 <React.Fragment>
-                    <Link to={`/edit/${props.note.id}`}>Edit <span aria-hidden="true" role="img">🔨</span></Link> {" "}
+                    <Link to={`/edit/${props.note.id}`}>Edit <img style={{width: "31px"}} src={hammer} /></Link> {" "}
                     <DeleteNote noteId={props.note.id} />
                 </React.Fragment>
             )}
