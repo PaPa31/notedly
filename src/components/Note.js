@@ -58,9 +58,16 @@ const UserActions = styled.div`
     }
 
     img {
-        width: 25px;
+        width: 24px;
         padding: 3px 1px 3px 2px;
-        vertical-align: -7px;
+        vertical-align: -6px;
+    }
+
+    a:link, a:visited, button {
+        color: #AEAFB0;
+    }
+    a:hover, a:focus, button:hover {
+        color: #9279BA;
     }
 
 @media (min-width: 500px) {
