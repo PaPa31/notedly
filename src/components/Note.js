@@ -44,10 +44,6 @@ const UserActions = styled.div`
     padding: 10px 0;
     clear: left;
 
-    em {
-        color: #9279BA;
-    }
-
     span {
         display: none;
     }
@@ -66,7 +62,7 @@ const UserActions = styled.div`
     a:link, a:visited, button {
         color: #AEAFB0;
     }
-    a:hover, a:focus, button:hover {
+    a:hover, button:hover {
         color: #9279BA;
     }
 
@@ -111,7 +107,7 @@ const Note = ({ note }) => {
                     </UserActions>
                 ) : (
                         <UserActions>
-                                <em>Likes<img src={like} />:</em> {note.favoriteCount}
+                                <img src={like} />: {note.favoriteCount}
                         </UserActions>
                     )}
             </MetaData>

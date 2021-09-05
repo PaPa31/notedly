@@ -12,7 +12,7 @@ const NoteWrapper = styled.div`
 
 const NoteFeed = ({ notes }) => {
     return (
-        <div>
+        <div className="note-feed">
             {notes.map(note => (
                 <NoteWrapper key={note.id}>
                     <Note note={note} />
