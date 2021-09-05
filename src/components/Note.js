@@ -57,15 +57,15 @@ const UserActions = styled.div`
     }
 
     img {
-        width: 27px;
+        width: 29px;
         padding: 3px 5px;
-        vertical-align: text-top;
+        vertical-align: -7px;
     }
 
 @media (min-width: 500px) {
     text-align: right;
     padding: 0;
-    max-width: 125px;
+    max-width: 107px;
 
     span {
         display: initial;
@@ -102,7 +102,7 @@ const Note = ({ note }) => {
                     </UserActions>
                 ) : (
                         <UserActions>
-                                <em>Favorites<img src={like} />:</em> {note.favoriteCount}
+                                <em>Likes<img src={like} />:</em> {note.favoriteCount}
                         </UserActions>
                     )}
             </MetaData>

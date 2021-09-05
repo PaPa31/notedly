@@ -39,7 +39,7 @@ const FavoriteNote = props => {
                         setCount(count - 1);
                     }}
                 >
-                    Remove
+                    Remove <img src={like} />
                 </ButtonAsLink>
             ) : (
                     <ButtonAsLink
@@ -49,10 +49,10 @@ const FavoriteNote = props => {
                             setCount(count + 1);
                         }}
                     >
-                        Add
-                    </ButtonAsLink>
+                        Add <img src={like} />
+                    </ButtonAsLink> 
                 )}
-                 <img src={like} />: {count}
+                 : {count}
         </React.Fragment>
     );
 }
