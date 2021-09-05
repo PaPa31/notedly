@@ -17,7 +17,7 @@ const HeaderBar = styled.header`
     z-index: 1;
 
 h1 {
-   color: #B9A5E2;
+   color: #E7DDFF;
 }    
 
 a {
