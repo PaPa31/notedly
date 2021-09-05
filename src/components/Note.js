@@ -13,6 +13,10 @@ import NoteUser from './NoteUser';
 const StyledNote = styled.article`
     max-width:800px;
 
+    p {
+    overflow-wrap: anywhere;
+    }
+
     img {
         max-width: 100%;
     }
