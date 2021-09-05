@@ -58,8 +58,8 @@ const UserActions = styled.div`
     }
 
     img {
-        width: 29px;
-        padding: 3px 5px 3px 2px;
+        width: 25px;
+        padding: 3px 1px 3px 2px;
         vertical-align: -7px;
     }
 
