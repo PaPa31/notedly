@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { IS_LOGGED_IN } from '../gql/query';
-import textblock from '../img/textblock-1.svg';
+import textblock from '../img/textblock-2.png';
 import logo from '../img/textblock-logo.svg';
 import ButtonAsLink from './ButtonAsLink';
 
@@ -52,7 +52,7 @@ const LogoText = styled.h1`
   position: absolute;
   background: url(${textblock}) center center no-repeat;
   height: 24px;
-  width: 162px;
+  width: 160px;
   text-indent: -30000px;
   top: 19px;
   @media (min-width: 320px) {
