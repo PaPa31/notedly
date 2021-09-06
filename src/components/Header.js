@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { IS_LOGGED_IN } from '../gql/query';
-import textblock from '../img/textblock-2.png';
+import textblock from '../img/textblock-2.svg';
 import logo from '../img/textblock-logo.svg';
 import ButtonAsLink from './ButtonAsLink';
 
