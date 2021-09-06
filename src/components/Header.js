@@ -59,6 +59,7 @@ const UserState = styled.div`
   margin-left: auto;
   a {
     text-decoration: underline;
+    padding: 5px 0;
   }
 `;
 
@@ -106,12 +107,12 @@ const Header = props => {
             Logout 🚪
           </ButtonAsLink>
         ) : (
-          <p>
-            <Link to={'/signin'}>Sign In 🔓</Link> or{' '}
+          <span>
+            <Link to={'/signin'}>Sign In 🔓</Link>
             <LastA>
               <Link to={'/signup'}>Sign Up 🔑</Link>
             </LastA>
-          </p>
+          </span>
         )}
       </UserState>
     </HeaderBar>
