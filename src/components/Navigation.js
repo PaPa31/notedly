@@ -92,7 +92,7 @@ const Navigation = () => {
           <span aria-hidden="true" role="img">
             👍🏼
           </span>
-          <Link to="/favorites">Favorites</Link>
+          <Link to="/favorites">Likes</Link>
         </li>
         <li>
           <span aria-hidden="true" role="img">
