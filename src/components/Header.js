@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { IS_LOGGED_IN } from '../gql/query';
+import textblock from '../img/textblock-1.svg';
 import logo from '../img/textblock-logo.svg';
 import ButtonAsLink from './ButtonAsLink';
 
@@ -25,6 +26,7 @@ const HeaderBar = styled.header`
   }
   button {
     color: #9279ba;
+    font-style: italic;
   }
   button:hover {
     color: #b9a5e2;
@@ -47,8 +49,14 @@ const LogoText = styled.h1`
   margin: 0;
   padding: 0;
   display: inline;
-
+  position: absolute;
+  background: url(${textblock}) center center no-repeat;
+  height: 24px;
+  width: 162px;
+  text-indent: -30000px;
+  top: 19px;
   @media (min-width: 320px) {
+    top: 22px;
     span {
       padding-right: 6px;
     }
@@ -60,6 +68,7 @@ const UserState = styled.div`
   a {
     text-decoration: underline;
     padding: 5px 0;
+    font-style: italic;
   }
   @media (min-width: 500px) {
     a {
@@ -85,10 +94,8 @@ const Header = props => {
   return (
     <HeaderBar>
       <Link to={'/'}>
-        <LogoText>
-          <img src={logo} alt="Textblock Logo" height="40" />
-          TextBlock
-        </LogoText>
+        <img src={logo} alt="Textblock Logo" height="40" />
+        <LogoText>TextBlock</LogoText>
       </Link>
       {/* Если авторизован, отображаем ссылку log out, в противном
  случае отображаем варианты sign in и sign up */}
