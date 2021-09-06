@@ -1,8 +1,8 @@
- import {
-    ApolloClient,
-    ApolloProvider,
-    createHttpLink,
-    InMemoryCache
+import {
+  ApolloClient,
+  ApolloProvider,
+  createHttpLink,
+  InMemoryCache
 } from '@apollo/client';
 import { setContext } from 'apollo-link-context';
 import React from 'react';
@@ -17,37 +17,36 @@ const cache = new InMemoryCache();
 
 // Проверяем наличие токена и возвращаем заголовки в контекст
 const authLink = setContext((_, { headers }) => {
-    return {
-        headers: {
-            ...headers,
-            authorization: localStorage.getItem('token') || ''
-        }
-    };
-})
+  return {
+    headers: {
+      ...headers,
+      authorization: localStorage.getItem('token') || ''
+    }
+  };
+});
 
- // Создаем клиент Apollo
+// Создаем клиент Apollo
 const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache,
-    resolvers: {},
-    connectToDevTools: true
-})
+  link: authLink.concat(httpLink),
+  cache,
+  resolvers: {},
+  connectToDevTools: true
+});
 
 // Проверяем наличие локального токена
- const data = {
- isLoggedIn: !!localStorage.getItem('token')
- };
- // Записываем кэшированные данные при начальной загрузке
- cache.writeData({ data });
- // Записываем данные кэша после его сброса 
- client.onResetStore(() => cache.writeData({ data }));
+const data = {
+  isLoggedIn: !!localStorage.getItem('token')
+};
+// Записываем кэшированные данные при начальной загрузке
+cache.writeData({ data });
+// Записываем данные кэша после его сброса
+client.onResetStore(() => cache.writeData({ data }));
 
 const App = () => (
-    <ApolloProvider client={client}>
-        <GlobalStyle />
-        <Pages />
-    </ApolloProvider>
-)
+  <ApolloProvider client={client}>
+    <GlobalStyle />
+    <Pages />
+  </ApolloProvider>
+);
 
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'));

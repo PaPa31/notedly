@@ -9,14 +9,14 @@ const Wrapper = styled.div`
   /* Можно применить в стилизованном компоненте стили медиазапросов */
   /* Таким образом, макет будет применяться только для экранов
  шириной 700 пикселей и больше */
-@media (min-width: 700px) {
-  display: flex;
-  top: 64px;
-  position: relative;
-  width: 100%;
-  flex: auto;
-  flex-direction: column;
-}
+  @media (min-width: 700px) {
+    display: flex;
+    top: 64px;
+    position: relative;
+    width: 100%;
+    flex: auto;
+    flex-direction: column;
+  }
 `;
 const Main = styled.main`
   height: 100%;
