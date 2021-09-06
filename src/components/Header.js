@@ -100,7 +100,7 @@ const Header = props => {
               });
               // Перенаправляем пользователя на домашнюю страницу
               props.history.push('/');
-              //  window.location = '/';
+              window.location = '/';
             }}
           >
             Logout 🚪
