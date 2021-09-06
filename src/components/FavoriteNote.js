@@ -52,7 +52,7 @@ const FavoriteNote = props => {
           Add <img src={like} />
         </ButtonAsLink>
       )}
-      : {count}
+      :<span style={{ paddingLeft: '2px' }}>{count}</span>
     </React.Fragment>
   );
 };

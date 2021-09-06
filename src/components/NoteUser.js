@@ -16,10 +16,14 @@ const NoteUser = props => {
     <React.Fragment>
       {data.me.id === props.note.author.id && (
         <React.Fragment>
-          <DeleteNote noteId={props.note.id} />{' '}
+          <DeleteNote noteId={props.note.id} />
           <Link to={`/edit/${props.note.id}`}>
-            Edit <img style={{ width: '27px' }} src={hammer} />
-          </Link>{' '}
+            Edit{' '}
+            <img
+              style={{ width: '26px', verticalAlign: '-8px' }}
+              src={hammer}
+            />
+          </Link>
         </React.Fragment>
       )}
       <FavoriteNote

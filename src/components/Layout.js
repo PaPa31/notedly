@@ -21,8 +21,11 @@ const Wrapper = styled.div`
 const Main = styled.main`
   height: 100%;
   width: 100%;
-  padding: 1em;
-  padding-top: 116px;
+  padding: 116px 0.75em 0 0.75em;
+
+  @media (min-width: 320px) {
+    padding: 116px 1em 0 1em;
+  }
 
   @media (min-width: 425px) {
     padding: 1.5em;

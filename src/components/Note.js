@@ -40,13 +40,9 @@ const MetaInfo = styled.div`
 // Выравниваем 'UserActions' по правой стороне на больших экранах
 const UserActions = styled.div`
   margin-left: auto;
-  text-align: left;
+  text-align: right;
   padding: 10px 0;
   clear: left;
-
-  span {
-    display: none;
-  }
 
   a {
     padding: 0 5px;
@@ -60,13 +56,8 @@ const UserActions = styled.div`
   }
 
   @media (min-width: 500px) {
-    text-align: right;
     padding: 0;
     max-width: 112px;
-
-    span {
-      display: initial;
-    }
 
     a {
       padding: 0;
@@ -100,7 +91,8 @@ const Note = ({ note }) => {
           </UserActions>
         ) : (
           <UserActions>
-            <img src={like} />: {note.favoriteCount}
+            <img src={like} />:
+            <span style={{ paddingLeft: '2px' }}>{note.favoriteCount}</span>
           </UserActions>
         )}
       </MetaData>

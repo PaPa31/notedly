@@ -22,7 +22,11 @@ const DeleteNote = props => {
   });
   return (
     <ButtonAsLink onClick={deleteNote}>
-      Delete <img style={{ verticalAlign: '-7px', width: '19px' }} src={dele} />
+      Delete{' '}
+      <img
+        style={{ verticalAlign: '-7px', width: '16px', paddingLeft: '0' }}
+        src={dele}
+      />
     </ButtonAsLink>
   );
 };
