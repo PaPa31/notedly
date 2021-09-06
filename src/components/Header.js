@@ -8,7 +8,7 @@ import ButtonAsLink from './ButtonAsLink';
 
 const HeaderBar = styled.header`
   width: 100%;
-  padding: 0;
+  padding: 0 2px 0 0;
   display: flex;
   height: 64px;
   position: fixed;
@@ -35,8 +35,8 @@ const HeaderBar = styled.header`
     vertical-align: bottom;
   }
 
-  @media (min-width: 360px) {
-    padding: 0.5em 1em;
+  @media (min-width: 320px) {
+    padding: 0.5em 0.5em 0 1em;
     img {
       padding: 0 5px 0 0;
     }
@@ -60,6 +60,11 @@ const UserState = styled.div`
   a {
     text-decoration: underline;
     padding: 5px 0;
+  }
+  @media (min-width: 500px) {
+    a {
+      padding-right: 10px;
+    }
   }
 `;
 
@@ -107,12 +112,12 @@ const Header = props => {
             Logout 🚪
           </ButtonAsLink>
         ) : (
-          <span>
+          <div>
             <Link to={'/signin'}>Sign In 🔓</Link>
             <LastA>
               <Link to={'/signup'}>Sign Up 🔑</Link>
             </LastA>
-          </span>
+          </div>
         )}
       </UserState>
     </HeaderBar>
